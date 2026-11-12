@@ -1,0 +1,42 @@
+{
+  "root": "/workspace/ha08/data",
+  "out": "/workspace/ha08/results",
+  "model": "ViT-B/32",
+  "device": "auto",
+  "batch_size": 32,
+  "limit": 0,
+  "dataset": "STL10",
+  "split": "test",
+  "evaluated": 8000,
+  "full_test": true,
+  "device_used": "cpu",
+  "classes": [
+    "airplane",
+    "bird",
+    "car",
+    "cat",
+    "deer",
+    "dog",
+    "horse",
+    "monkey",
+    "ship",
+    "truck"
+  ],
+  "templates": {
+    "simple": [
+      "a photo of a {}."
+    ],
+    "ensemble": [
+      "a photo of a {}.",
+      "a photo of the {}."
+    ]
+  },
+  "python": "3.12.16",
+  "parameter_count": 151277313,
+  "updated_parameters": 0,
+  "preprocessing": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x7f5d7761eb60>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "torch": "2.5.1+cpu",
+  "torchvision": "0.20.1+cpu",
+  "cuda": null,
+  "gpu": null
+}
